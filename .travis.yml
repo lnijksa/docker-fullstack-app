@@ -20,7 +20,7 @@ deploy:
   region: "us-east-2"
   app: "docker-fullstack-app"
   env: "Dockerfullstackapp-env"
-  bucket_name: 	elasticbeanstalk-us-east-2-028117448186 #s3의 버킷이름
+  bucket_name: 	elasticbeanstalk-us-east-2-028117448186
   bucket_path: "docker-fullstack-app"
   on:
     branch: master
