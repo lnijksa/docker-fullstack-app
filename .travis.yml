@@ -14,3 +14,15 @@ after_success:
   - docker push lnijksa/docker-frontend
   - docker push lnijksa/docker-backend
   - docker push lnijksa/docker-nginx
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-fullstack-app"
+  env: "Dockerfullstackapp-env"
+  bucket_name: 	elasticbeanstalk-us-east-2-028117448186 #s3의 버킷이름
+  bucket_path: "docker-fullstack-app"
+  on:
+    branch: master
+  
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECURET_ACCESS_KEY
