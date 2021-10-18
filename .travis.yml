@@ -15,6 +15,7 @@ after_success:
   - docker push lnijksa/docker-backend
   - docker push lnijksa/docker-nginx
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-fullstack-app"
